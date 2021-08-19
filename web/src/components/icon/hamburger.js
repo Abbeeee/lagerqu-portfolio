@@ -1,6 +1,6 @@
 import React from "react";
 
-const strokeStyle = { vectorEffect: "non-scaling-stroke" };
+const strokeStyle = { vectorEffect: "non-scaling-stroke"};
 
 const HamburgerIcon = () => (
   <svg
@@ -8,12 +8,12 @@ const HamburgerIcon = () => (
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
     preserveAspectRatio="xMidYMid"
-    width="1em"
-    height="1em"
+    width="1.5em"
+    height="1.5em"
   >
-    <path d="M5 7.5H20" stroke="currentColor" style={strokeStyle} />
-    <path d="M5 12.5H20" stroke="currentColor" style={strokeStyle} />
-    <path d="M5 17.5H20" stroke="currentColor" style={strokeStyle} />
+    <path strokeWidth="2" d="M5 7.5H20" stroke="currentColor"  style={strokeStyle} />
+    <path strokeWidth="2" d="M5 12.5H20" stroke="currentColor" style={strokeStyle} />
+    <path strokeWidth="2" d="M5 17.5H20" stroke="currentColor" style={strokeStyle} />
   </svg>
 );
 

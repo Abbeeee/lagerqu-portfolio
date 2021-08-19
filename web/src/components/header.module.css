@@ -72,7 +72,7 @@
 
   @media (hover: hover) {
     @nest & ul li a:hover {
-      color: var(--color-accent);
+      background-color: var(--color-very-light-gray);
     }
   }
 
@@ -80,17 +80,18 @@
     position: absolute;
     background: var(--color-white);
     color: var(--color-black);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.25);
     left: 0;
     right: 0;
     top: 4.3rem;
 
     @nest & ul {
       padding: 1rem 0;
+      text-align: center;
     }
 
     @nest & ul li a {
-      padding: 0.5rem 1.5rem;
+      padding: 1.5rem 0;
     }
   }
 
@@ -104,7 +105,8 @@
     }
 
     @nest & ul li a {
-      padding: 0.5rem;
+      padding: 0.5rem 1rem;
+      margin-left: 0.5rem;
     }
   }
 }

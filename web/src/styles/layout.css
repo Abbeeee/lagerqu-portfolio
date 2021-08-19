@@ -19,3 +19,12 @@ body > div,
 body > div > div {
   height: 100%;
 }
+
+.btn {
+  display: inline-block;
+  color: var(--main-white);
+  background: var(--main-blue);
+  padding: 10px 16px;
+  margin-top: 20px;
+  font-weight: 500;
+}

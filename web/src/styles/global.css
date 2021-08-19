@@ -1,0 +1,11 @@
+@import './custom-properties.css';
+
+.btn-main {  
+  display: inline-block;
+  color: var(--color-white);
+  background: var(--color-accent);
+  padding: .7em 1.5em;
+  margin-top: 20px;
+  font-weight: 500;
+  margin-right: 10px;
+}

@@ -12,59 +12,21 @@ import SEO from "../components/seo";
 import Layout from "../containers/layout";
 import { responsiveTitle1, base } from "../components/typography.module.css";
 
-
+import "../styles/global.css";
 
 
 
 export const query = graphql`
-  query IndexPageQuery {
+  query AboutPageQuery {
     site: sanitySiteSettings(_id: { regex: "/(drafts.|)siteSettings/" }) {
       title
       description
       keywords
     }
-    projects: allSanitySampleProject(
-      limit: 6
-      sort: { fields: [publishedAt], order: DESC }
-      filter: { slug: { current: { ne: null } }, publishedAt: { ne: null } }
-    ) {
-      edges {
-        node {
-          id
-          mainImage {
-            crop {
-              _key
-              _type
-              top
-              bottom
-              left
-              right
-            }
-            hotspot {
-              _key
-              _type
-              x
-              y
-              height
-              width
-            }
-            asset {
-              _id
-            }
-            alt
-          }
-          title
-          _rawExcerpt
-          slug {
-            current
-          }
-        }
-      }
-    }
   }
 `;
 
-const IndexPage = props => {
+const AboutPage = props => {
   const { data, errors } = props;
 
   if (errors) {
@@ -92,17 +54,12 @@ const IndexPage = props => {
     <Layout>
       <SEO title={site.title} description={site.description} keywords={site.keywords} />
       <Container>
-        <h1 className={responsiveTitle1}>Creative & Tech</h1>
-        <p className={base}>My name is Albin. Have a look at my projects ↓</p>
+        <h1 className={responsiveTitle1}>About</h1>
+        <p className={base}>My name is Albin. This is a text about me.</p>
         <Link to="/archive"><div className={'btn-main'}>My Projects</div></Link>
-          <ProjectPreviewGrid
-            title="Latest projects"
-            nodes={projectNodes}
-            browseMoreHref="/archive/"
-          />
       </Container>
     </Layout>
   );
 };
 
-export default IndexPage;
+export default AboutPage;
