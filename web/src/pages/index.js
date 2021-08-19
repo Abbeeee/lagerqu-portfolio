@@ -95,11 +95,11 @@ const IndexPage = props => {
         <h1 className={responsiveTitle1}>Creative & Tech</h1>
         <p className={base}>My name is Albin. Have a look at my projects ↓</p>
         <Link to="/archive"><div className={'btn-main'}>My Projects</div></Link>
-          <ProjectPreviewGrid
+          {/* <ProjectPreviewGrid
             title="Latest projects"
             nodes={projectNodes}
             browseMoreHref="/archive/"
-          />
+          /> */}
       </Container>
     </Layout>
   );
